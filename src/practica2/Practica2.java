@@ -4,17 +4,16 @@
  */
 package practica2;
 
-/**
- *
- * @author aerod
- */
-public class Practica2 {
+import Controlador.Controlador;
+import Vista.FrmPrincipal;
+import javax.swing.SwingUtilities;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Practica2 {
     public static void main(String[] args) {
-        // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            FrmPrincipal vista = new FrmPrincipal();
+            Controlador controlador = new Controlador(vista); // Guardamos la referencia del controlador
+            vista.setVisible(true);
+        });
     }
-    
 }
